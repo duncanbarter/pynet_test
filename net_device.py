@@ -54,7 +54,7 @@ class NetDevice(object):
         self.find_uptime()
 
     def __str__(self):
-        _ = self.__dict__
+        _ = self.__dict__.copy()
         _.pop('source')
         output = '#####\n\n'
         for k, v in _.items():
