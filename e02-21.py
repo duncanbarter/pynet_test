@@ -56,10 +56,10 @@ class NetDevice(object):
     def __str__(self):
         _ = self.__dict__
         _.pop('source')
-        output = '#####\n'
+        output = '#####\n\n'
         for k, v in _.items():
             output = output + k + ': ' + v + '\n'
-        output = output + '#####'
+        output = output + '\n#####'
         return str(output)
     
 def read_file(filename):
